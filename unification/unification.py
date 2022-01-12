@@ -1,3 +1,4 @@
+
 import re
 def getAttributes(expression):
     expression = expression.split("(")[1:]
@@ -53,7 +54,7 @@ def unify(exp1, exp2):
 
     if isConstant(exp1) and isConstant(exp2):
         if exp1 != exp2:
-            print("{exp1} and {exp2} are constants. Cannot be unified".format(exp1 = exp1, exp2 = exp2))
+            print(f"{exp1} and {exp2} are constants. Cannot be unified")
             return []
 
     if isConstant(exp1):
@@ -75,7 +76,7 @@ def unify(exp1, exp2):
     attributeCount1 = len(getAttributes(exp1))
     attributeCount2 = len(getAttributes(exp2))
     if attributeCount1 != attributeCount2:
-        print("Length of attributes {attributeCount1} and {attributeCount2} do not match. Cannot be unified".format(attributeCount1 = attributeCount1, attributeCount2 = attributeCount2))
+        print(f"Length of attributes {attributeCount1} and {attributeCount2} do not match. Cannot be unified")
         return []
 
     head1 = getFirstPart(exp1)

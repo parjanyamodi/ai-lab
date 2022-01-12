@@ -100,5 +100,5 @@ def main():
     q = input()
     kb.query(q)
     kb.display()
-    
+
 main()

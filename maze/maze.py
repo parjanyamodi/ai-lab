@@ -1,9 +1,8 @@
-
 import math
 import numpy as np
 s = [['#','#','#','#'],
-['#','S','.','.'],
-['.','#','#','.'],
+['#','S','#','.'],
+['.','.','#','.'],
 ['#','.','#','D']]
 rows = len(s)
 col = len(s[0])
@@ -38,7 +37,7 @@ def calF(cur,dest) :
             Min = f
             next_state = t
     return next_state
-   
+    
 def A_star(src,dest) :
     visited_states.append(src)
     if src == dest :
@@ -49,7 +48,7 @@ def A_star(src,dest) :
     next_state = calF(src,dest)
     if next_state not in visited_states :
         A_star(next_state,dest)
-   
+    
 def maze(src):
     print(np.matrix(s))
     for i in range(rows):
@@ -59,5 +58,6 @@ def maze(src):
             if s[i][j] == 'D' :
                 dest = (i,j)
     A_star(cur,dest)
-   
-maze(s)  
+    
+maze(s)    
+    

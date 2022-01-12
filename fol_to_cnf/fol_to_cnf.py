@@ -88,6 +88,6 @@ def main():
     print("Enter FOL:")
     fol = input()
     print("The CNF form of the given FOL is: ")
-    print(Skolemization(fol_to_cnf(fol)))   
+    print(Skolemization(fol_to_cnf(fol)))
 
 main()
